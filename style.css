@@ -56,7 +56,6 @@ body {
   display: flex;
   flex: 1;
   background: white;
-  min-width: 300px;
 }
 
 .slider-active {
