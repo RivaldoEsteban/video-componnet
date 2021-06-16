@@ -1,0 +1,111 @@
+@import "./icomoon/style.css";
+
+body {
+  margin: 0;
+  background: #26b4bc;
+  display: flex;
+  align-items: center;
+  block-size: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: auto;
+}
+
+.video-content {
+  position: relative;
+}
+
+.video-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition-duration: 300s;
+}
+
+.video {
+  width: 100%;
+}
+
+.icons {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: calc(50% - 32px);
+  color: white;
+  background: none;
+  opacity: 0;
+}
+
+.icons button {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+
+.slider-container {
+  height: 10px;
+  background: white;
+  bottom: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  background: white;
+  min-width: 300px;
+}
+
+.slider-active {
+  bottom: 0;
+  width: 0;
+  height: inherit;
+  background: #237cce;
+  border-radius: 8px;
+}
+
+.video-time {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  right: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+@keyframes playback {
+  0% {
+    bottom: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    bottom: 30px;
+    transform: scale(1);
+  }
+}
+@keyframes icons {
+  0% {
+    bottom: calc(30% - 32px);
+  }
+  100% {
+    bottom: calc(50% - 32px);
+  }
+}
+
+.video-component:hover .video-time {
+  opacity: 1;
+  animation-name: playback;
+  animation-duration: 300ms;
+}
+
+.video-component:hover .icons {
+  opacity: 1;
+  animation-name: icons;
+  animation-duration: 300ms;
+}

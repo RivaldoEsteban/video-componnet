@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Video component</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="video-component">
+      <div class="video-content">
+        <video class="video" src="video/video.mp4"  id="video">
+        </video>
+        <div class="icons">
+          <button>
+            <i class="icon-retroceder" id="backTime"></i>
+          </button>
+
+          <button>
+            <i class="icon-play" id="play"></i>
+          </button>
+          <button>
+            <i class="icon-adelantar" id="advanceTime"></i>
+          </button>
+        </div>
+        <div class="video-time">
+          <p id='time-start'>00:00</p>
+          <div class="slider-container" id="slider">
+            <div class="slider-active" id="current-time-slider"></div>
+          </div>
+          <p id='time-end'>00:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js.js"></script>
+</body>
+</html>
